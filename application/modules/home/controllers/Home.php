@@ -13,11 +13,13 @@ class Home extends MY_Controller
 
 	function index()
 	{
-		echo "welcome to codeigniter HMVC";
+		$data['content_view'] = 'home/home_v';
+		$this->template->sample_template($data);
 	}
 
-	function test()
+	function about()
 	{
-		echo "I have run the test";
+		$data['content_view'] = 'home/about_v';
+		$this->template->sample_template($data);
 	}
 }
